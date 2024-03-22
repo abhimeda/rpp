@@ -44,7 +44,7 @@ steps:
   displayName: 'Installing Imagemagick'
 
 - script: |
-    git clone git@github.com:NIFTI-Imaging/nifti_clib.git
+    git clone https://github.com/NIFTI-Imaging/nifti_clib.git
     cd nifti_clib
     mkdir build
     cd build
