@@ -57,10 +57,12 @@ steps:
   displayName: 'Pip installing openpyxl'
 
 - script: |
+    pwd
     mkdir build-hip
     cd build-hip
     cmake ..
     make -j8
+    pwd
     echo "rocm" | sudo -S make install
   displayName: 'Building...'
 
