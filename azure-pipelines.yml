@@ -61,7 +61,7 @@ steps:
     cd build-hip
     cmake ..
     make -j8
-    sudo make install
+    echo "rocm" | sudo -S make install
   displayName: 'Building...'
 
 - script: |
