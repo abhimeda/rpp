@@ -14,12 +14,12 @@ steps:
     
     echo "rocm" | sudo -S apt-get -y --allow-unauthenticated install build-essential libgtk2.0-dev libavcodec-dev libavformat-dev libswscale-dev python3-dev python3-numpy
     echo "rocm" | sudo -S apt-get -y --allow-unauthenticated install libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-dev unzip wget
-    echo "rocm" | sudo -S apt install libopencv-dev python3-opencv
+    echo "rocm" | sudo -S apt-get -y install libopencv-dev python3-opencv
   displayName: 'Installing OpenCV'
 
 - script: |
-    echo "rocm" | sudo -S apt-get install nasm
-    echo "rocm" | sudo -S apt-get install wget
+    echo "rocm" | sudo -S apt-get -y install nasm
+    echo "rocm" | sudo -S apt-get -y install wget
     git clone -b 2.0.6.1 https://github.com/rrawther/libjpeg-turbo.git
     cd libjpeg-turbo
     mkdir build
@@ -35,12 +35,12 @@ steps:
   displayName: 'Installing TurboJpeg'
 
 - script: |
-    echo "rocm" | sudo -S apt-get update
-    echo "rocm" | sudo -S apt-get install libsndfile1-dev
+    echo "rocm" | sudo -S apt-get -y update
+    echo "rocm" | sudo -S apt-get -y install libsndfile1-dev
   displayName: 'Installing Libsndfile'
 
 - script: |
-    echo "rocm" | sudo -S apt-get install imagemagick
+    echo "rocm" | sudo -S apt-get -y install imagemagick
   displayName: 'Installing Imagemagick'
 
 - script: |
