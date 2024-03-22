@@ -49,7 +49,7 @@ steps:
     mkdir build
     cd build
     cmake ..
-    echo "rocm" | sudo -S make -j$nproc install
+    echo "rocm" | sudo -S make -j4 install
   displayName: 'Installing Nifti-Imaging nifti_clib'
 
 - script: |
