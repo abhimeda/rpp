@@ -68,7 +68,12 @@ steps:
 
 - script: |
     cd build-hip
-    make test
-    ls
+    ctest --output-junit output.xml
   displayName: 'Running tests'
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'junit'
+    testResultsFiles: '**/build-hip/output.xml' 
+  condition: succeededOrFailed()
+  displayName: 'Test Results'
 
