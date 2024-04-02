@@ -69,5 +69,6 @@ steps:
 - script: |
     cd build-hip
     make test
+    ls
   displayName: 'Running tests'
 
